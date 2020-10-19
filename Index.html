@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Go India - Secure And Easier Search</title>
+<link rel="icon" href="https://i.ibb.co/gJzZSg8/Logo.png" type="image/icon">
+</head>
+<body bgcolor = #ff3300  onload = "hideloading();">
+<center><div id = "loader-container" class = "loader-container" style = "background-color: #ff3300; width: 100%; height: 100vh; position: fixed; animation: fade-out 4s 1;"><div class = "loader" style = "color: green; border: 5px solid; border-radius: 50%; width: 50px; height: 50px; margin-top: 250; margin-bottom: 250; border-top-color: transparent; border-bottom-color: transparent; animation: spin 1s linear infinite;"></div><div class = "loader2" style = "color: white; border: 5px solid; border-radius: 50%; width: 70px; height: 70px; margin-top: -320; margin-bottom: 320; border-right-color: transparent; border-left-color: transparent; animation: spin2 1s linear infinite;"></div><div class = "loader3" style = "color: purple; border: 5px solid; border-radius: 50%; width: 10px; height: 10px; margin-top: -370; margin-bottom: 370; border-top-color: transparent; border-bottom-color: transparent; animation: spin2 1s linear infinite;"></div></div></center>
+<style>
+@keyframes spin{
+0%{ transform: rotate(0deg); }
+100%{ transform: rotate(360deg); color; blue;}
+}
+@keyframes spin2{
+0%{ transform: rotate(0deg); }
+100%{ transform: rotate(-360deg); color; blue;}
+}
+</style>
+<script>
+function hideloading() {
+document.getElementById("loader-container").style.opacity = "0";
+document.getElementById("loader-container").style.zIndex = "-1";
+}
+</script>
+<br><center><div style = "width: 1348; height: 50; "><b><font title = "Quick Search" size = 6 color = "white" style = "cursor: pointer;" onclick = alert("Sorry,\nWork&nbsp;Is&nbsp;In&nbsp;Progress\nIt&nbsp;Will&nbsp;Available&nbsp;Soon\nThank&nbsp;You"); >Quick Search</font>
+<font style = "cursor: default;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+<font title = "Apps Made By Us" color = "WHITE" size = 6 onclick = alert("Not&nbsp;Yet&nbsp;&#128517;\nBut&nbsp;Will&nbsp;Soon&nbsp;&#128513;") style = "cursor: pointer;" >Apps</font></a></b></div></center><br><br>
+<br><center><div style = "width: 1350; height: 35;"><img aria-label = "logo" src = "https://i.ibb.co/HHmKPjk/Logo2.png"  name = "Logo" style = "displayblock; margin-top: auto; margin-bottom: auto;" oncontextmenu = "return false;"></center></div><br><br><br><br><br><br><br><br>
+<form id = "search" action = "https://www.google.co.in/search" accept-charset = "UTF-8" name = "Search" id = "sf" data-sumbitfalse = "q" method = "GET" autocomplete = "off">
+<center><div style = "width: 1350; height: 35;"><input id = "text" name = "q" type = "text , url" title = "Search"  language = "en-US , hi" size = 25 role = "combobox" autocomplete = "off" spellcheck = "false" style = "displayblock; margin-top: -69; margin-bottom: 69; height: 41px; font-size: 18pt; border: none; focus; outline: none; text-align: center; caret-color: blue; text; color: #ff3300; border-radius: 20px 0px 0px 20px;" ><input name = "Submit" type = "image" value = "Google Search" title = "Submit" src = "https://i.ibb.co/27GLgmr/Search-Bar-black-part.png" style = "displayblock; margin-top: 13; margin-bottom: -13; border: none; focus; outline: none;" oncontextmenu = "return false;"><img class = "voice typing" title = "Voice Search" onclick="startDictation()" src = "https://i.ibb.co/Xzr9wyH/Voice.png" style = "margin-left: 25; margin-right: -25; margin-top: 8; margin-bottom: -8; cursor: pointer;" oncontextmenu = "return false;"></div></form></center>
+
+<script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition' , 'mozSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US" , "hi";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('text').value
+                                 = e.results[0][0].transcript;
+        recognition.stop();
+        document.getElementById('search').submit();
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><div style = "width: 1350; height: 35;"><a href = "https://www.youtube.com/channel/UC_LhrmzvqgHvOVx9TESUImw" style = "text-decoration: none; focus; outline: none;"><button title = "Cooking With Neha Parashar" style = "cursor: pointer; border-radius: 20px; width: 90px; height: 35px; color: white; background-color: transparent; border: 2px solid; focus; outline: none; border-color: black;">Recipes</button></a>
+<font style = "cursor: default;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+<a href = "https://playdude.itch.io/" style = "text-decoration: none; focus; outline: none;"><button title = "PlayDude - Itch.io" color = "white" size = 5 style = "cursor: pointer; width: 90px; height: 35px; border-radius: 20px; color: white; background-color: transparent; border: 2px solid; focus; outline: none; border-color: black;">Games</button></a>
+<font style = "cursor: default;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+<a href = "https://www.youtube.com/channel/UC20aRFkRpgsxikSrPPs8MNA" style = "text-decoration: none; focus; outline: none;"><button title = "Khudrang Music Studio"color = "white" size = 5 style = "cursor: pointer; border-radius: 20px; width: 90px; height: 35px; color: white; background-color: transparent; border: 2px solid; focus; outline: none; border-color: black;">Music</button></a>
+<font style = "cursor: default;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+<a href = "https://trello.com/b/vzpEH117/go-india-made-in-india" style = "text-decoration: none; focus; outline: none; "><button color = "white" size = 5 title = "See Our Roadmap On Trello" style = "cursor: pointer; border-radius: 20px; width: 90px; height: 35px; color: white; background-color: transparent; border: 2px solid; focus; outline: none; border-color: black;;">RoadMap</button></div></a></b></center>
+</html>
