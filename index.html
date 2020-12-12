@@ -28,7 +28,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body BGcolor="black" onload = "hideloading();">
 <center><div id = "loader-container" class = "loader-container" style = "background-color: black; width: 100%; height: 100vh; position: fixed; animation: fade-out 4s 1;"><div class = "loader" style = "color: green; border: 5px solid; border-radius: 50%; width: 50px; height: 50px; margin-top: 250; margin-bottom: 250; border-top-color: transparent; border-bottom-color: transparent; animation: spin 1s linear infinite;"></div><div class = "loader2" style = "color: orangered; border: 5px solid; border-radius: 50%; width: 70px; height: 70px; margin-top: -320; margin-bottom: 320; border-right-color: transparent; border-left-color: transparent; animation: spin2 1s linear infinite;"></div><div class = "loader3" style = "color: purple; border: 5px solid; border-radius: 50%; width: 10px; height: 10px; margin-top: -370; margin-bottom: 370; border-top-color: transparent; border-bottom-color: transparent; animation: spin2 1s linear infinite;"></div></div></center>
+<div id="v" onclick="stop()" style="width: 100%; height: 100%; position:fixed; background-color: rgba(0, 0, 0, 0.651); display: none;"><div class="kiroku-voice"></div></div>
 <style>
+  .kiroku-voice {
+  position: relative;
+  margin: auto;
+  margin-top: 20%;
+  height: 100px;
+  width: 100px;
+  font-size: 8px;
+  text-align: center;
+  vertical-align: sub;
+  line-height: 40px;
+  border-radius: 200px;
+  background: orangered;
+  -webkit-animation: rainbow 3s infinite linear;
+  position: relative; }
+  .kiroku-voice:after {
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-radius: 200px;
+    margin: 0 auto;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+    background: linear-gradient(to left, orangered, rgb(201, 56, 3), rgb(10, 135, 207), #9e16c3, #6501de, #9e16c3, #c42da8, #e4428d, #ff5770);
+    background-size: 200% 200%;
+    -webkit-animation: animateGlow 1s linear infinite;
+            animation: animateGlow 1s linear infinite; }
+
+@-webkit-keyframes animateGlow {
+  0% {
+    background-position: 0% 50%; }
+  100% {
+    background-position: 200% 50%; } }
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%; }
+  100% {
+    background-position: 200% 50%; } }
+
+@keyframes rainbow {
+  0% {
+    transform: rotate(0deg) translateZ(0);
+    box-shadow: 0 0 .3em .05em #2c116e, inset $rotate-radius 0 .1em .02em #de66e4;
+  }
+  
+  25% {
+    transform: rotate(90deg) translateZ(0);
+    box-shadow: 0 0 .3em .05em #28126a, inset $rotate-radius 0 .1em .02em #34ceaa;
+  }
+  
+  50% {
+    transform: rotate(180deg) translateZ(0);
+    box-shadow: 0 0 .3em .05em #28126a, inset $rotate-radius 0 .1em .02em #19b3f5;
+  }
+  
+  75% {
+    transform: rotate(270deg) translateZ(0);
+    box-shadow: 0 0 .3em .05em #28126a, inset $rotate-radius 0 .1em .02em #3d52ac;
+  }
+  
+  100% {
+    transform: rotate(360deg) translateZ(0);
+    box-shadow: 0 0 .3em .05em #28126a, inset $rotate-radius 0 .1em .02em #de66e4;
+  }
+}
 @keyframes spin{
 0%{ transform: rotate(0deg); }
 100%{ transform: rotate(360deg); color; blue;}
@@ -66,9 +139,14 @@ document.getElementById("loader-container").style.zIndex = "-1";
 }
 </style>
 <script>
+  function stop() {
+    document.getElementById('v').style.display = "none";
+
+  }
   function startDictation() {
 
     if (window.hasOwnProperty('webkitSpeechRecognition' , 'mozSpeechRecognition')) {
+      document.getElementById('v').style.display = "block";
 
       var recognition = new webkitSpeechRecognition();
 
@@ -83,9 +161,11 @@ document.getElementById("loader-container").style.zIndex = "-1";
                                  = e.results[0][0].transcript;
         recognition.stop();
         document.getElementById('search').submit();
+        document.getElementById('v').style.display = "none";
       };
 
       recognition.onerror = function(e) {
+        document.getElementById('v').style.display = "none";
         recognition.stop();
       }
 
