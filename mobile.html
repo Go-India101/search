@@ -35,6 +35,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <center><div id = "loader-container" class = "loader-container" style = "background-color: #0e0e0e; width: 100%; height: 100vh; position: fixed; animation: fade-out 4s 1;"><div class = "loader" style = "color: green; border: 5px solid; border-radius: 50%; width: 50px; height: 50px; margin-top: 250; margin-bottom: 250; border-top-color: transparent; border-bottom-color: transparent; animation: spin 1s linear infinite;"></div><div class = "loader2" style = "color: orangered; border: 5px solid; border-radius: 50%; width: 70px; height: 70px; margin-top: -320; margin-bottom: 320; border-right-color: transparent; border-left-color: transparent; animation: spin2 1s linear infinite;"></div><div class = "loader3" style = "color: purple; border: 5px solid; border-radius: 50%; width: 10px; height: 10px; margin-top: -370; margin-bottom: 370; border-top-color: transparent; border-bottom-color: transparent; animation: spin2 1s linear infinite;"></div></div></center>
 <div id="v" onclick="stop()" style="width: 100%; height: 100%; position:fixed; background-color: rgba(0, 0, 0, 0.651); left: 0px; top: 0px; display: none;"><div class="kiroku-voice"></div></div>
 <style>
+  body{
+    text-align: center;
+  }
   body::-webkit-scrollbar {
   width: 20px;
 }
@@ -145,7 +148,7 @@ document.getElementById("loader-container").style.zIndex = "-1";
 
 </script>
 <center><br>
-<center><b><img src="logo2.png" style="width: 30%;" ></center></div><br>
+<center><b><img src="logo2.png" style="width: 60%;" ></center></div><br>
 <font color ="orangered" style="font-size: 15pt; font-family: 'KoHo', sans-serif;">We Tries To Make Your Search More Easier And Secure</font>
 <br><br><br><br>
 <center><div style = "height: 35;"><script async src="https://cse.google.com/cse.js?cx=70bd097d1a8766cd0"></script>
@@ -195,7 +198,7 @@ background-color: #0e0e0e;
 }
 form.gsc-search-box {
 background-color: #0e0e0e;
-width: 50%;
+width: 100%;
 border: 5px solid;
 color: #0e0e0e;
 }
@@ -243,6 +246,7 @@ display: none;
 .gsc-selected-option-container.gsc-inline-block{
 display: none;
 }
+
 .gsc-results .gsc-cursor-box .gsc-cursor-page{
 color: white;
 border: none;
@@ -260,6 +264,8 @@ background-color: black;
 background-color: black;
 border-radius: 20px;
 border: 2px solid white;
+width: 80%;
+margin-left: 8%;
 }
 
 .gsc-results-wrapper-visible::-webkit-scrollbar {
@@ -314,6 +320,18 @@ border-top-right-radius: 0px;
 border-bottom-right-radius: 0px;
 padding-left: 20px;
 }
+.gsc-cursor-numbered-page{
+color: white;
+}
+.gsc-cursor-next-page{
+color: white;
+}
+.gsc-cursor-chevron{
+color: white;
+}
+.gcsc-more-maybe-branding-box{
+display: none;
+}
 div.gsc-control-cse {} 
 </style>
 <script>
@@ -350,13 +368,7 @@ div.gsc-control-cse {}
   }
   
 </script>
-        <script type="text/javascript">
-            <!--
-            if (screen.width <= 699) {
-            document.location = "mobile.html";
-            }
-            //-->
-            </script>
+
 <br><br><br><br><br><br>
 <style>
 
