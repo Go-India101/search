@@ -31,13 +31,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 </head>
-<body BGcolor="#0e0e0e" onload = "hideloading();">
-<center><div id = "loader-container" class = "loader-container" style = "background-color: #0e0e0e; width: 100%; height: 100vh; position: fixed; animation: fade-out 4s 1;"><div class = "loader" style = "color: green; border: 5px solid; border-radius: 50%; width: 50px; height: 50px; margin-top: 250; margin-bottom: 250; border-top-color: transparent; border-bottom-color: transparent; animation: spin 1s linear infinite;"></div><div class = "loader2" style = "color: orangered; border: 5px solid; border-radius: 50%; width: 70px; height: 70px; margin-top: -320; margin-bottom: 320; border-right-color: transparent; border-left-color: transparent; animation: spin2 1s linear infinite;"></div><div class = "loader3" style = "color: purple; border: 5px solid; border-radius: 50%; width: 10px; height: 10px; margin-top: -370; margin-bottom: 370; border-top-color: transparent; border-bottom-color: transparent; animation: spin2 1s linear infinite;"></div></div></center>
-<div id="v" onclick="stop()" style="width: 100%; height: 100%; position:fixed; background-color: rgba(0, 0, 0, 0.651); left: 0px; top: 0px; display: none;"><div class="kiroku-voice"></div></div>
+<body BGcolor="white" onload = "hideloading();">
+<center><div id = "loader-container" class = "loader-container" style = "background-color: white; width: 100%; height: 100vh; position: fixed; animation: fade-out 4s 1;"><div class = "loader" style = "color: #242424; border: 5px solid; border-radius: 50%; width: 50px; height: 50px; margin-top: 250; margin-bottom: 250; border-top-color: transparent; border-bottom-color: transparent; animation: spin 1s linear infinite;"></div><div class = "loader2" style = "color: #595567; border: 5px solid; border-radius: 50%; width: 70px; height: 70px; margin-top: -320; margin-bottom: 320; border-right-color: transparent; border-left-color: transparent; animation: spin2 1s linear infinite;"></div><div class = "loader3" style = "color: black; border: 5px solid; border-radius: 50%; width: 10px; height: 10px; margin-top: -370; margin-bottom: 370; border-top-color: transparent; border-bottom-color: transparent; animation: spin2 1s linear infinite;"></div></div></center>
+<div id="v" onclick="stop()" style="width: 100%; height: 100%; position:fixed; background-color: rgba(250, 250, 250, 0.651); left: 0px; top: 0px; display: none;"><div class="kiroku-voice"></div></div>
 <style>
-  body{
-    text-align: center;
-  }
   body::-webkit-scrollbar {
   width: 20px;
 }
@@ -47,8 +44,8 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: orangered;
-  border-radius: 50px;
+  background-color: #595567;
+  border-radius: 20px;
 }
   .kiroku-voice {
   position: relative;
@@ -60,8 +57,8 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   vertical-align: sub;
   line-height: 40px;
-  border-radius: 200px;
-  background: orangered;
+  border-radius: 20px;
+  background: #595567;
   -webkit-animation: rainbow 3s infinite linear;
   position: relative; }
   .kiroku-voice:after {
@@ -72,14 +69,12 @@ body::-webkit-scrollbar-thumb {
     right: 0;
     z-index: -1;
     height: 100%;
-    width: 100%;
-    border-radius: 200px;
+    width: 100%;;
     margin: 0 auto;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
     -webkit-filter: blur(30px);
     filter: blur(30px);
-    background: linear-gradient(to left, orangered, rgb(201, 56, 3), rgb(10, 135, 207), #9e16c3, #6501de, #9e16c3, #c42da8, #e4428d, #ff5770);
     background-size: 200% 200%;
     -webkit-animation: animateGlow 1s linear infinite;
             animation: animateGlow 1s linear infinite; }
@@ -130,14 +125,15 @@ body::-webkit-scrollbar-thumb {
 0%{ transform: rotate(0deg); }
 100%{ transform: rotate(-360deg); color; blue;}
 }
+
 ::-moz-selection { /* Code for Firefox */
-  color: red;
-  background: yellow;
+  color: white;
+  background: #595567;
 }
 
 ::selection {
   color: white;
-  background: orangered;
+  background: #595567;
 }
 </style>
 <script>
@@ -148,31 +144,30 @@ document.getElementById("loader-container").style.zIndex = "-1";
 
 </script>
 <center><br>
-<center><b><img src="logo2.png" style="width: 60%;" ></center></div><br>
-<font color ="orangered" style="font-size: 15pt; font-family: 'KoHo', sans-serif;">We Tries To Make Your Search More Easier And Secure</font>
+<center><b><img src="logo2.png" style="width: 60%;" ><a href="mobiledark.html"><img class="dark" src="dark.png"></a></center></div><br>
+<font color ="black" style="font-size: 15pt; font-family: 'KoHo', sans-serif;">We Tries To Make Your Search More Easier And Secure</font>
 <br><br><br><br>
 <center><div style = "height: 35;"><script async src="https://cse.google.com/cse.js?cx=70bd097d1a8766cd0"></script>
-<div class="gcse-search"></div><br><i class="fa fa-microphone fa-3x" aria-hidden="true" title = "Voice Search" onclick="startDictation()" style = "cursor: pointer; width: 47px; height: 47px; color: orangered;background-color: white; border-radius: 50%;" oncontextmenu = "return false;"></i></div></center>
+<div class="gcse-search"></div><br><img src="voice.png" class="fa fa-microphone fa-3x" aria-hidden="true" title = "Voice Search" onclick="startDictation()" style = "cursor: pointer; width: 47px; height: 47px; color: orangered;background-color: #595567; border-radius: 50%;" oncontextmenu = "return false;"></i></div></center>
 <style>
 input.gsc-input {
-background-color: #0e0e0e;
+background-color: white;
 border: 5px solid;
-color: orangered;
-border-color: green;
-caret-color: white;
+color: #595567;
+caret-color: black;
 padding-left: 20px;
 font-size: 15pt;
 font-family: 'KoHo', sans-serif;
 }
 .gsc-control-wrapper-cse{
-background-color: #0e0e0e;
+background-color: white;
 }
 div.gsc-control-cse{
-background-color: #0e0e0e;
+background-color: white;
 border: none;
 }
 .gsib_a{
-background-color: #0e0e0e;
+background-color: white;
 border-radius: 50px;
 border-top-right-radius: 0px;
 border-bottom-right-radius: 0px;
@@ -180,42 +175,67 @@ padding-left: 20px;
 
 }
 .gsib_b{
-background-color: #0e0e0e;
+background-color: white;
 }
 #gs_id50{
-background-color: #0e0e0e;
+background-color: white;
 }
 .gsc-search-button {
-  background-color: #0e0e0e;
-   border-top-right-radius: 50px;
-   border-bottom-right-radius: 50px;
+  background-color: #595567;
+  border-radius: 50px;
    border: none;
    outline: none;
 }
 .gsc-search-button:hover {
-  background-color: #0e0e0e;
+  background-color: #595567;
   cursor: pointer;
+  color: #595567;
+}
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus{
+  background-color: #595567;
+  color: #595567;
 }
 form.gsc-search-box {
-background-color: #0e0e0e;
+background-color: white;
 width: 100%;
 border: 5px solid;
-color: #0e0e0e;
+color: white;
+}
+.gsc-search-button-v2 svg {
+    fill: #FFFFFF;
+}
+.dark{
+  right: 5%;
+  position: absolute;
 }
 td.gsc-search-button{
-  border: 5px solid green;
-   border-top-right-radius: 50px;
-   border-bottom-right-radius: 50px;
+  border: 2px solid #595567;
+  background-color: #595567;
+  border-radius: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-left: none ;
+}
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus{
+    border-radius: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-left: none ;
+
+}
+td.gsc-search-button:hover{
+  background-color: #595567;
+  color: #595567;
 }
 div.gsst_b{
-color: white;
+color: black;
 }
 a.gsst_a{
 text-decoration: none;
-color: white;
+color: black;
 }
 .gsst_a .gscb_a{
-color:  white;
+color:  black;
 opacity: 1;
 margin-top: -5px;
 font-size: 30pt;
@@ -225,7 +245,7 @@ font-family: 'KoHo', sans-serif;
 display: none;
 }
 div.gsc-webResult.gsc-result, .gsc-results .gsc-imageResult{
-border-radius: 20px;
+border-radius: 0px;
 z-index: 9999999;
 font-family: 'KoHo', sans-serif;
 }
@@ -233,7 +253,7 @@ font-family: 'KoHo', sans-serif;
 display: none;
 }
 .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b{
-color: white;
+color: black;
 font-weight: bold;
 font-family: 'KoHo', sans-serif;
 }
@@ -246,26 +266,23 @@ display: none;
 .gsc-selected-option-container.gsc-inline-block{
 display: none;
 }
-
 .gsc-results .gsc-cursor-box .gsc-cursor-page{
-color: white;
+color: black;
 border: none;
 background-color: transparent;
 font-weight: bold;
 font-size: 15pt;
 font-family: 'KoHo', sans-serif;
-border-radius: 10px;
+border-radius: 5px;
 outline: none;
 }
 .gsc-modal-background-image-visible{
-background-color: black;
+background-color: white;
 }
 .gsc-results-wrapper-visible{
-background-color: black;
-border-radius: 20px;
-border: 2px solid white;
-width: 80%;
-margin-left: 8%;
+background-color: white;
+border-radius: 8px;
+border: 2px solid #595567;
 }
 
 .gsc-results-wrapper-visible::-webkit-scrollbar {
@@ -277,17 +294,17 @@ margin-left: 8%;
 }
  
 .gsc-results-wrapper-visible::-webkit-scrollbar-thumb {
-  background-color: orangered;
-  border-radius: 50px;
+  background-color: #595567;
+  border-radius: 5px;
 }
 .gsc-results-close-btn-visible{
   display: none;
 }
 .gsc-results:hover .gsc-cursor-box:hover .gsc-cursor-page:hover{
-color: purple;
+color: #595567;
 }
 .gs-webResult div.gs-visibleUrl-breadcrumb{
-color: purple;
+color: #595567;
 }
 div.gsc-expansionArea{
 border-radius: 20px;
@@ -295,42 +312,33 @@ border-top-right-radius: 0px;
 border-top-left-radius: 0px;
 background-color: black;
 }
+.gsc-tabData.gsc-tabdActive{
+  background-color: white;
+}
 .gs-webResult.gs-result a.gs-title:hover, .gs-webResult.gs-result a.gs-title:hover b, .gs-imageResult a.gs-title:hover, .gs-imageResult a.gs-title:visited b:hover{
-color: orangered;
+color: #595567;
 text-decoration: underline;
 }
 .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b:visited{
-color: orangered;
+color: #595567;
 text-decoration: underline;
 }
 .gsst_a .gscb_a:hover{
-color: orangered;
+color: #595567;
 }
 a.gsst_a{
-color: orangered
-}
-.gsc-search-button-v2:hover, .gsc-search-button-v2:focus{
-background-color: #0e0e0e;
+color: #595567;
+display: none;
 }
 div.gsc-input-box{
-background-color: #0e0e0e;
-border: 5px solid green;
+background-color: white;
+border: 2px solid #595567;
 border-radius: 50px;
 border-top-right-radius: 0px;
 border-bottom-right-radius: 0px;
-padding-left: 20px;
-}
-.gsc-cursor-numbered-page{
-color: white;
-}
-.gsc-cursor-next-page{
-color: white;
-}
-.gsc-cursor-chevron{
-color: white;
-}
-.gcsc-more-maybe-branding-box{
-display: none;
+padding-left: 15px;
+border-right: none;
+width: 100%;
 }
 div.gsc-control-cse {} 
 </style>
@@ -370,101 +378,10 @@ div.gsc-control-cse {}
 </script>
 
 <br><br><br><br><br><br>
-<style>
 
-   .button {
-
-   display: inline-block;
-
-   font-size: 15px;
-
-   cursor: pointer;
-
-   text-align: center;
-
-   text-decoration: bold;
-
-   outline: none;
-
-   color: #0e0e0e;
-
-   background-color: transparent;
-
-   border: 5px solid;
-border-color: orangered;
-
-   border-radius: 100px;
-
-   box-shadow: none;
-
-   }
-
-   
-
-   .button:hover {background-color: orangered}
-
-   
-
-   .button:active {
-
-   background-color: transparent;
-
-   box-shadow: none;
-
-   transform: translateY(8px);
-
-   }
-
-   </style>
-
-   
-
-   <style>
-
-   a:link {
-
-   color: white;
-
-   background-color: transparent;
-
-   text-decoration: none;
-
-   }
-
-   a:visited {
-
-   color: white;
-
-   background-color: transparent;
-
-   text-decoration: none;
-
-   }
-
-   a:hover {
-
-   color: white;
-
-   background-color: transparent;
-
-   text-decoration: none;
-
-   }
-
-   a:active {
-
-   color: white;
-
-   background-color: transparent;
-
-   text-decoration: none;
-
-   }
-
-   </style>
 <center>
 <footer style="position: absolute; bottom: 0px; background-color: transparent; width: 100%; left: 0px; height: 40px; padding-top: 30px; z-index: -9999999">
-<a href ="https://go-india101.github.io/home/" target="_blank" style= "text-decoration: none; color: orangered; font-size: 20pt; font-family: 'KoHo', sans-serif;">&copy; Go India</a>
+<a href ="https://go-india101.github.io/home/" target="_blank" style= "text-decoration: none; color: #595567; font-size: 20pt; font-family: 'KoHo', sans-serif;">&copy; Go India</a>
 </footer>
 </center>
 </center>
